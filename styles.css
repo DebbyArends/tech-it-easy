@@ -1,0 +1,14 @@
+#sold-tvs {
+    color: hsl(150, 48%, 52%);
+    font-weight: bold;
+}
+
+#bought-stock {
+    color: hsl(221, 71% ,65%);
+    font-weight: bold;
+}
+
+#unsold-tvs {
+    color: hsl(0, 99%, 64%);
+    font-weight: bold;
+}
