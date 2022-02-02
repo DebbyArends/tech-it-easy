@@ -27,6 +27,7 @@ console.log(object2(inventory[0]))
 // Als een tv maar één schermgrootte heeft ([32]) wordt de output 32 inch (81 cm). Wanneer een tv vier
 // schermgroottes heeft ([43, 50, 55, 58]) wordt de output 43 inch (109 cm) | 50 inch (127 cm) | 58 inch (147 cm).
 // Test of jouw functie werkt in alle mogelijke gevallen.
+
 function object3(details) {
     if (details.availableSizes.length === 1)
         return `${details.availableSizes} inches (${ Math.round(details.availableSizes * 2.54)} cm)`
@@ -34,7 +35,10 @@ function object3(details) {
         let output = " "
         for (let i = 0; i <details.availableSizes.length; i++) {
             let inchToCm = Math.round(details.availableSizes[i] * 2.54)
-            output = `${output} ${details.availableSizes[i]} inch (${inchToCm} cm) |`
+            output = `${output} ${details.availableSizes[i]} inch (${inchToCm} cm)`
+            if (i !== details.availableSizes.length - 1){
+                output = `${output} |`
+            }
         }
         return output
     }
@@ -42,7 +46,6 @@ function object3(details) {
 
 console.log(object3(inventory[3]))
 
-//Het laatste streepje moet weg
 
 //Opdracht 4d: Zorg ervoor de informatie van één van de tv's zoals het voorbeeld wordt weergegeven op de pagina.
 // Gebruik hiervoor de functies die je hebt gemaakt in opdracht 5a, 5b en 5c.
